@@ -15,15 +15,17 @@
 
 
     </head>
-    <body>
-        <p class="titleText">
-            Got to start doing the thing.
-        </p>
-        <div>
-            <input type="text"></br>
-            <input type="number" min=1 max=10><label>Rate your energy level for the day</label></br>
-            <input type="checkbox"><label> Did you meditate today?</label>
-            <button class="submit">Submit</button>
+    <body ng-app="myApp">
+        <div ng-controller="submitDayController as sc">
+            <p class="titleText">
+                Got to start doing the thing.
+            </p>
+            <div>
+                <input type="text" id="Notes"></br>
+                <input type="number" min=1 max=10 id="Energy"><label>Rate your energy level for the day</label></br>
+                <input type="checkbox" id="Meditate"><label> Did you meditate today?</label>
+                <button class="submit" ng-click="sc.submitDay()">Submit</button>
+            </div>
         </div>
         
     </body>

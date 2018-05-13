@@ -1,32 +1,58 @@
 <!DOCTYPE html>
-<html class="no-js"> <!--<![endif]-->
-    <head>
-        <script src="vendors/angular.min.js" charset="utf-8"></script>
-        <script src="vendors/angular-route.min.js" charset="utf-8"></script>
-        <script type="text/javascript" src="script.js"></script>
+<html class="no-js">
+<!--<![endif]-->
 
-        <link rel="stylesheet" href="style.css">
+<head>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="script.js"></script>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>12 Week Project</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>12 Week Project</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    </head>
-    <body ng-app="myApp">
-        <div ng-controller="submitDayController as sc">
-            <p class="titleText">
-                Got to start doing the thing.
-            </p>
-            <div>
-                <input type="text" id="Notes"></br>
-                <input type="number" min=1 max=10 id="Energy"><label>Rate your energy level for the day</label></br>
-                <input type="checkbox" id="Meditate"><label> Did you meditate today?</label>
-                <button class="submit" ng-click="sc.submitDay()">Submit</button>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="submitDayController as sc">
+        <p class="titleText">
+            Got to start doing the thing.
+        </p>
+        <div class="grid-container">
+            <div class="grid-item1">
+                <label>Rate your energy level for the day</label>
+                <input type="number" min=1 max=10 id="Energy">
             </div>
+
+            <div class="grid-item2">
+                <label> Did you meditate today?</label>
+                <input type="checkbox" id="Meditate">
+            </div>
+            <button class="submit" ng-click="sc.submitDay()">Submit</button>
+            <div class="grid-item3">
+                <label>Did you complete a task in this Pillar today?</label>
+                <input type="checkbox" id="Pillar1">
+            </div>
+            <div class="grid-item4">
+                <label>Did you complete a task in this Pillar today?</label>
+                <input type="checkbox" id="Pillar2">
+            </div>
+            <div class="grid-item5">
+                <label>Did you complete a task in this Pillar today?</label>
+                <input type="checkbox" id="Pillar3">
+            </div>
+
+            <input class="grid-item6" type="text" id="Notes" placeholder="Notes for the day">
+
+
         </div>
-        
-    </body>
+    </div>
+
+</body>
+
 </html>
